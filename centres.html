@@ -74,7 +74,7 @@ http://www.templatemo.com/tm-516-known
 
 
      <!-- TEAM -->
-     <section id="team">
+     <section id="vue-app">
           <div class="container">
                <div class="row">
 
@@ -83,17 +83,17 @@ http://www.templatemo.com/tm-516-known
                                 <h2>Quran Centres and Arabic Centres<small>see the Islamic Centres</small></h2>
                          </div>
                     </div>
-
-                    <div class="col-md-3 col-sm-6">
+                   
+                    
+                    <div v-for="centre in centres" class="col-md-3 col-sm-6">
                          <div class="team-thumb">
                               <div class="team-image">
 
                                    <img src="images/i-read-quran-centre.jpg" class="img-responsive" alt="">
                               </div>
                               <div class="team-info">
-                                   <h3>i read Quran centre</h3>
-                                   <span>Address: 29 Lor Marzuki, Singapore 417088
-                                        Phone: +65 6618 0455</span>
+                                   <h3>{{centre}}</h3>
+                                   <span></span>
                               </div>
                               <ul class="social-icon">
                                    
@@ -103,115 +103,6 @@ http://www.templatemo.com/tm-516-known
                          </div>
                     </div>
 
-                    <div class="col-md-3 col-sm-6">
-                         <div class="team-thumb">
-                              <div class="team-image">
-                                   <img src="images/andalus.jpg" class="img-responsive" alt="">
-                              </div>
-                              <div class="team-info">
-                                   <h3>Andalus</h3>
-                                   <span>Education is the key!</span>
-                              </div>
-                              <ul class="social-icon">
-                                   <li><a href="#" class="fa fa-twitter"></a></li>
-                                   <li><a href="#" class="fa fa-instagram"></a></li>
-                              </ul>
-                         </div>
-                    </div>
-
-                    <div class="col-md-3 col-sm-6">
-                         <div class="team-thumb">
-                              <div class="team-image">
-                                   <img src="images/aspire-institute.jpg" class="img-responsive" alt="">
-                              </div>
-                              <div class="team-info">
-                                   <h3>Aspire Institute</h3>
-                                   <span>I like Online Courses</span>
-                              </div>
-                              <ul class="social-icon">
-                                   <li><a href="#" class="fa fa-twitter"></a></li>
-                                   <li><a href="#" class="fa fa-instagram"></a></li>
-                              </ul>
-                         </div>
-                    </div>
-
-                    <div class="col-md-3 col-sm-6">
-                         <div class="team-thumb">
-                              <div class="team-image">
-                                   <img src="images/darul-huffaz.jpg" class="img-responsive" alt="">
-                              </div>
-                              <div class="team-info">
-                                   <h3>Darul Huffaz</h3>
-                                   <span>Learning is fun</span>
-                              </div>
-                              <ul class="social-icon">
-                                   <li><a href="#" class="fa fa-twitter"></a></li>
-                                   <li><a href="#" class="fa fa-instagram"></a></li>
-                                   
-                              </ul>
-                         </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                         <div class="team-thumb">
-                              <div class="team-image">
-                                   <img src="images/darul-quran.jpg" class="img-responsive" alt="">
-                              </div>
-                              <div class="team-info">
-                                   <h3>Darul Quran</h3>
-                                   <span>I like Online Courses</span>
-                              </div>
-                              <ul class="social-icon">
-                                   <li><a href="#" class="fa fa-twitter"></a></li>
-                                   <li><a href="#" class="fa fa-instagram"></a></li>
-                                   
-                              </ul>
-                         </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                         <div class="team-thumb">
-                              <div class="team-image">
-                                   <img src="images/yameen.jpg" class="img-responsive" alt="">
-                              </div>
-                              <div class="team-info">
-                                   <h3>Yameen</h3>
-                                   <span>I like Online Courses</span>
-                              </div>
-                              <ul class="social-icon">
-                                   <li><a href="#" class="fa fa-twitter"></a></li>
-                                   <li><a href="#" class="fa fa-instagram"></a></li>
-                              </ul>
-                         </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                         <div class="team-thumb">
-                              <div class="team-image">
-                                   <img src="images/muhd-zuhaili.jpg" class="img-responsive" alt="">
-                              </div>
-                              <div class="team-info">
-                                   <h3>muhammad zuhaili</h3>
-                                   <span>I like Online Courses</span>
-                              </div>
-                              <ul class="social-icon">
-                                   <li><a href="#" class="fa fa-twitter"></a></li>
-                                   <li><a href="#" class="fa fa-instagram"></a></li>
-                              </ul>
-                         </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                         <div class="team-thumb">
-                              <div class="team-image">
-                                   <img src="images/nadi.jpg" class="img-responsive" alt="">
-                              </div>
-                              <div class="team-info">
-                                   <h3>Nadi Quran Learning Centre</h3>
-                                   <span>I like Online Courses</span>
-                              </div>
-                              <ul class="social-icon">
-                                   <li><a href="#" class="fa fa-twitter"></a></li>
-                                   <li><a href="#" class="fa fa-instagram"></a></li>
-                              </ul>
-                         </div>
-                    </div>
 
                </div>
           </div>
@@ -219,11 +110,14 @@ http://www.templatemo.com/tm-516-known
 
 
      <!-- SCRIPTS -->
+     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+     <script src="js/vue.js"></script>
      <script src="js/jquery.js"></script>
      <script src="js/bootstrap.min.js"></script>
      <script src="js/owl.carousel.min.js"></script>
      <script src="js/smoothscroll.js"></script>
      <script src="js/custom.js"></script>
+     
 
 </body>
 </html>
