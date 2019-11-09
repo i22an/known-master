@@ -1,6 +1,9 @@
+
 var app = new Vue({
     el: '#vue-app',
     data: {
+        selectedCentre: {},
+        showModal: false,
         centres: [
             {
                 name: "I read Quran Centre",
@@ -66,5 +69,11 @@ var app = new Vue({
                 levels:[],
             },
         ]
+    },
+    methods: {
+        toggleShowModal: function(centre = {}){
+            this.showModal = !this.showModal;
+            this.selectedCentre = centre;
+        }
     }
   })
