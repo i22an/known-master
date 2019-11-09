@@ -97,9 +97,7 @@ http://www.templatemo.com/tm-516-known
                             </div>
                     </div>
 
-                   
-                    
-                    <div v-for="centre in filteredCentres" class="col-md-3 col-sm-6">
+                    <div v-for="centre in centres" class="col-md-3 col-sm-6" @click="toggleShowModal(centre)">
                          <div class="team-thumb">
                               <div class="team-image">
                                    <img v-bind:src="'images/' + centre.image" class="img-responsive" alt="">
