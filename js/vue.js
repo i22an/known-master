@@ -45,6 +45,13 @@ var app = new Vue({
                 website:"https://mzuhailiservices.wordpress.com/about/"
 
             },
+            {
+                name: "Al-Markaz",
+                image: "markaz.jpg",
+                description: "The Arabic Language Centre",
+                website:"http://almarkaz.sg/"
+
+            },
         ]
     }
   })
