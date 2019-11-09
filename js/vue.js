@@ -120,6 +120,20 @@ var app = new Vue({
                 },
 
             },
+            {
+                name: "Puspa",
+                image: "puspa.jpg",
+                description: "The Ukhrawi Learning Centre",
+                website:"",
+                area: {
+                    north: false,
+                    south: false,
+                    east: false,
+                    west: false,
+                    central: true
+                },
+
+            },
         ],
         areaFilter:  ""
     },
