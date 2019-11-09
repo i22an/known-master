@@ -1,3 +1,13 @@
+function sendMessage() {
+    alert('We appreciate listening to you!') ;
+    let emailInput = document.getElementById('emailInput');
+    let nameInput = document.getElementById('nameInput')
+    let messageInput = document.getElementById('messageInput')
+
+    console.log(emailInput.length);
+
+}
+
 var app = new Vue({
     el: '#vue-app',
     data: {
@@ -47,4 +57,5 @@ var app = new Vue({
             },
         ]
     }
-  })
+})
+
