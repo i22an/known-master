@@ -77,10 +77,23 @@ http://www.templatemo.com/tm-516-known
                          <div class="section-title">
                                 <h2>Quran Centres and Arabic Centres<small>see the Islamic Centres</small></h2>
                          </div>
+                         <p>{{areaFilter}}</p>
+                         <div class="btn-group">
+                              <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false">
+                                Right-aligned but left aligned when large screen
+                              </button>
+                              <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left">
+                                <button class="dropdown-item" type="button" v-on:click="setAreaFilter('North')">North</button>
+                                <button class="dropdown-item" type="button"v-on:click="setAreaFilter('south')">South</button>
+                                <button class="dropdown-item" type="button"v-on:click="setAreaFilter('Central')">Central</button>
+                                <button class="dropdown-item" type="button"v-on:click="setAreaFilter('East')">East</button>
+                                <button class="dropdown-item" type="button"v-on:click="setAreaFilter('West')">West</button>
+                              </div>
+                            </div>
                     </div>
                    
                     
-                    <div v-for="centre in centres" class="col-md-3 col-sm-6">
+                    <div v-for="centre in filteredCentres" class="col-md-3 col-sm-6">
                          <div class="team-thumb">
                               <div class="team-image">
 
