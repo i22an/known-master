@@ -84,11 +84,11 @@ http://www.templatemo.com/tm-516-known
                          <div class="team-thumb">
                               <div class="team-image">
 
-                                   <img src="images/i-read-quran-centre.jpg" class="img-responsive" alt="">
+                                   <img v-bind:src="'images/' + centre.image" class="img-responsive" alt="">
                               </div>
                               <div class="team-info">
-                                   <h3>{{centre}}</h3>
-                                   <span></span>
+                                   <h3>{{centre.name}}</h3>
+                                   <span>{{centre.description}}</span>
                               </div>
                               <ul class="social-icon">
                                    
