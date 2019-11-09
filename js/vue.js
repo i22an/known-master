@@ -7,7 +7,13 @@ var app = new Vue({
                 image: "i-read-quran-centre.jpg",
                 description: "We provide a secure and conducive environment for the holistic development of each child physically, socially, morally, emotionally and intellectually.",
                 website: "http://i-readquran.org/",
-                area:"East",
+                area: {
+                    north: false,
+                    south: false,
+                    east: true,
+                    west: false,
+                    central: false
+                },
                 subjects:[],
                 levels:[],
             },
@@ -17,6 +23,13 @@ var app = new Vue({
                 description: "Menyediakan pendidikan Islam dengan kesungguhan, kesabaran dan keikhlasan dalam melahirkan Muslim yang berilmu dan bertaqwa berteraskan al-Quran dan al-Sunnah.",
                 website:"http://www.andalus.sg/webandalus/index.php",
                 area:['East','West','Central','North'],
+                area: {
+                    north: true,
+                    south: false,
+                    east: true,
+                    west: true,
+                    central: true
+                },
                 subjects:[],
                 levels:[],
             },
@@ -26,6 +39,13 @@ var app = new Vue({
                 description: "For students who can already read Al-Quran and want to start to understand Al-Quran from basics.",
                 website:"https://aspireinstitute.com/",
                 area:['East','North','West'],
+                area: {
+                    north: true,
+                    south: false,
+                    east: true,
+                    west: true,
+                    central: false
+                },
                 subjects:[],
                 levels:[],
             },
@@ -35,6 +55,13 @@ var app = new Vue({
                 description: "We are a dedicated group of Quran teachers with the common objective of promoting Quranic reading and its proficiency and understanding among the local Muslims. We also offer courses that augment our core programmes and promote understanding and awareness of Islam.",
                 website: "http://darulhuffaz.sg/",
                 area:"East",
+                area: {
+                    north: false,
+                    south: false,
+                    east: true,
+                    west: false,
+                    central: false
+                },
                 subjects:[],
                 levels:[],
             },
@@ -53,6 +80,13 @@ var app = new Vue({
                 description: "Using a systematic and structured approach, we aim to provide a safe learning environment for beginners or those who have lost touch in learning the Quran. ",
                 website:"http://www.yameen.sg/",
                 area:"Central",
+                area: {
+                    north: false,
+                    south: false,
+                    east: false,
+                    west: false,
+                    central: true
+                },
                 subjects:[],
                 levels:[],
             },
@@ -62,8 +96,29 @@ var app = new Vue({
                 description: "Welcome to MZ Services Singapore",
                 website:"https://mzuhailiservices.wordpress.com/about/",
                 area:"East",
+                area: {
+                    north: false,
+                    south: false,
+                    east: true,
+                    west: false,
+                    central: false
+                },
                 subjects:[],
                 levels:[],
+            },
+            {
+                name: "Al-Markaz",
+                image: "markaz.jpg",
+                description: "The Arabic Language Centre",
+                website:"http://almarkaz.sg/",
+                area: {
+                    north: false,
+                    south: false,
+                    east: false,
+                    west: false,
+                    central: true
+                },
+
             },
         ],
         areaFilter:  ""
@@ -78,8 +133,11 @@ var app = new Vue({
             if (!this.areaFilter) {
                 return this.centres;
             } else {
-                return this.centres.filter(centre => centre.area === this.areaFilter)
+                return this.centres.filter(centre => centre.area[this.areaFilter.toLowerCase()] === true)
             }
         }
+
+         
+
     }
   })
