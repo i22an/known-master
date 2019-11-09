@@ -155,6 +155,11 @@ var app = new Vue({
             }
         }
 
-        
+    },
+    methods: {
+        toggleShowModal: function(centre = {}){
+            this.showModal = !this.showModal;
+            this.selectedCentre = centre;
+        }   
     }
   })
