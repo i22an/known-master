@@ -85,7 +85,7 @@ http://www.templatemo.com/tm-516-known
                          <p>{{areaFilter}}</p>
                          <div class="btn-group">
                               <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false">
-                                Filter by Area
+                                Right-aligned but left aligned when large screen
                               </button>
                               <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left">
                                 <button class="dropdown-item" type="button" v-on:click="setAreaFilter('North')">North</button>
@@ -98,6 +98,9 @@ http://www.templatemo.com/tm-516-known
                     </div>
 
                     <div v-for="centre in centres" class="col-md-3 col-sm-6" @click="toggleShowModal(centre)">
+                   
+                    
+                    <div v-for="centre in filteredCentres" class="col-md-3 col-sm-6">
                          <div class="team-thumb">
                               <div class="team-image">
                                    <img v-bind:src="'images/' + centre.image" class="img-responsive" alt="">
