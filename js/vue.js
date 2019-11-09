@@ -144,7 +144,11 @@ var app = new Vue({
     methods: {
         setAreaFilter: function(area) {
            this.areaFilter= area;
-        }
+        },
+        toggleShowModal: function(centre = {}){
+            this.showModal = !this.showModal;
+            this.selectedCentre = centre;
+        }  
     },
     computed: {
         filteredCentres: function() {
@@ -156,10 +160,4 @@ var app = new Vue({
         }
 
     },
-    methods: {
-        toggleShowModal: function(centre = {}){
-            this.showModal = !this.showModal;
-            this.selectedCentre = centre;
-        }   
-    }
   })
