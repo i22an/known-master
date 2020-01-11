@@ -81,23 +81,40 @@ http://www.templatemo.com/tm-516-known
                     <div class="col-md-12 col-sm-12">
                          <div class="section-title">
                               <h2>Quran Centres and Arabic Centres<small>see the Islamic Centres</small></h2>
-                         </div>
-                         <p>{{areaFilter}}</p>
+                         </div>                         
+                            <!-- Split button -->
                          <div class="btn-group">
-                              <div style="width: 500px"></div>
-                              <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false">
-                                Filter
+                              <button type="button" class="btn btn-success">Location Area</button>
+                              <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <span class="caret"></span>
+                              <span class="sr-only">Toggle Dropdown</span>
                               </button>
-                              <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left">
-                                   <h4>Area</h4>
-                                <button class="dropdown-item" type="button" v-on:click="setAreaFilter('North')">North</button>
-                                <button class="dropdown-item" type="button"v-on:click="setAreaFilter('south')">South</button>
-                                <button class="dropdown-item" type="button"v-on:click="setAreaFilter('Central')">Central</button>
-                                <button class="dropdown-item" type="button"v-on:click="setAreaFilter('East')">East</button>
-                                <button class="dropdown-item" type="button"v-on:click="setAreaFilter('West')">West</button>
-                              </div>
+                              <ul class="dropdown-menu">
+                              <li><a v-on:click="setAreaFilter('all')">All</a></li>
+                              <li><a v-on:click="setAreaFilter('North')">North</a></li>
+                              <li><a v-on:click="setAreaFilter('South')">South</a></li>
+                              <li><a v-on:click="setAreaFilter('East')">East</a></li>
+                              <li><a v-on:click="setAreaFilter('West')">West</a></li>
+                              <li><a v-on:click="setAreaFilter('Central')">Central</a></li>
+                              
+                              </ul>
+                         </div>
 
-                            </div>
+                         <div class="btn-group">
+                                   <button type="button" class="btn btn-success">Subjects</button>
+                                   <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                   <span class="caret"></span>
+                                   <span class="sr-only">Toggle Dropdown</span>
+                                   </button>
+                                   <ul class="dropdown-menu">
+                                   <li><a v-on:click="setSubjectFilter('Arabic Language')">Arabic Language</a></li>
+                                   <li><a v-on:click="setSubjectFilter('Quran')">Quran</a></li>
+                                   <li><a v-on:click="setSubjectFilter('Tafseer')">Tafseer</a></li>
+                                   <li><a v-on:click="setSubjectFilter('Islamic Studies')">Islamic Studies</a></li>
+                                   
+                                   
+                                   </ul>
+                              </div>
                     </div>
                    
                     
