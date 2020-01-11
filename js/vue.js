@@ -12,13 +12,13 @@ var app = new Vue({
                 desc: "We provide a secure and conducive environment for the holistic development of each child physically, socially, morally, emotionally and intellectually.",//
                 website: "http://i-readquran.org/",
                 area: {
-                    north: false,
+                    north: true,
                     south: false,
                     east: true,
                     west: false,
                     central: false
                 },
-                subjects:[],
+                subjects:["Quran"],
                 levels:[],
             },
             {
@@ -35,7 +35,7 @@ var app = new Vue({
                     west: true,
                     central: true
                 },
-                subjects:[],
+                subjects:["Quran", "Arabic Languages", "Islamic Studies", "Tafseer"],
                 levels:[],
             },
             {
@@ -52,7 +52,7 @@ var app = new Vue({
                     west: true,
                     central: false
                 },
-                subjects:[],
+                subjects:["Quran", "Tafseer"],
                 levels:[],
             },
                 {
@@ -69,7 +69,7 @@ var app = new Vue({
                     west: false,
                     central: false
                 },
-                subjects:[],
+                subjects:["Quran"],
                 levels:[],
             },
             {
@@ -79,7 +79,7 @@ var app = new Vue({
                 desc: "Menyediakan pendidikan Islam dengan kesungguhan, kesabaran dan keikhlasan dalam melahirkan Muslim yang berilmu dan bertaqwa berteraskan al-Quran dan al-Sunnah.",
                 website:"https://www.mks.org.sg/darul-quran/",
                 area:"East",
-                subjects:[],
+                subjects:["Quran","Tafseer"],
                 levels:[],
             },
             {
@@ -96,7 +96,7 @@ var app = new Vue({
                     west: false,
                     central: true
                 },
-                subjects:[],
+                subjects:["Quran", "Tafseer"],
                 levels:[],
             },
             {
@@ -113,7 +113,7 @@ var app = new Vue({
                     west: false,
                     central: false
                 },
-                subjects:[],
+                subjects:["Quran"],
                 levels:[],
             },
 
@@ -130,6 +130,8 @@ var app = new Vue({
                     west: false,
                     central: true
                 },
+                subjects:["Arabic Language"],
+                levels:[],
 
             },
             {
@@ -145,15 +147,21 @@ var app = new Vue({
                     west: false,
                     central: true
                 },
+                subjects:["Islamic Studies", "Arabic Language"],
+                levels:[],
 
             },
         ],
-        areaFilter:  ""
+        areaFilter: "all",
+        subjectFilter: "all"
     },
     methods: {
         setAreaFilter: function(area) {
            this.areaFilter= area;
         },
+        setSubjectFilter: function(subject) {
+            this.subjectFilter= subject;
+         },
         toggleShowModal: function(centre = {}){
             this.showModal = !this.showModal;
             this.selectedCentre = centre;
@@ -161,12 +169,25 @@ var app = new Vue({
     },
     computed: {
         filteredCentres: function() {
-            if (!this.areaFilter) {
-                return this.centres;
-            } else {
-                return this.centres.filter(centre => centre.area[this.areaFilter.toLowerCase()] === true)
-            }
-        }
+            console.log("this.subjectFilter", this.subjectFilter)
+            console.log("this.areaFilter", this.areaFilter)
+
+            
+                return this.centres
+                        .filter(centre => {
+                            if (this.areaFilter=== "all") {
+                                return this.centres
+                            }
+                            return centre.area[this.areaFilter.toLowerCase()] === true
+                        })
+                        .filter(centre => {
+                            if (this.subjectFilter=== "all") {
+                                return this.centres
+                            }
+
+                            return centre.subjects.includes(this.subjectFilter)
+                        })
+        },
 
     },
   })
