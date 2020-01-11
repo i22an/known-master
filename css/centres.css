@@ -39,3 +39,12 @@
 .modal .show {
     display: 'block';
 }
+
+.centre-card {
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+.centre-card:hover {
+    box-shadow: 0 0 30px black;
+}

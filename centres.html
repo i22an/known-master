@@ -84,7 +84,7 @@ http://www.templatemo.com/tm-516-known
                          </div>
                          <p>{{areaFilter}}</p>
                          <div class="btn-group">
-
+                              <div style="width: 500px"></div>
                               <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false">
                                 Filter
                               </button>
@@ -99,13 +99,12 @@ http://www.templatemo.com/tm-516-known
 
                             </div>
                     </div>
-
-                   
+<div class="col-md-3 col-sm-6 centre-card"><div class="team-thumb"><div class="team-image"><img src="images/andalus.jpg" alt="" class="img-responsive img-rounded"></div> <div class="team-info"><h3>Andalus</h3> <span>Menyediakan pendidikan Islam dengan kesungguhan, kesabaran dan keikhlasan dalam melahirkan Muslim yang berilmu dan bertaqwa berteraskan al-Quran dan al-Sunnah.</span></div> <ul class="social-icon"><li><a href="http://www.andalus.sg/webandalus/index.php" target="_blank" class="fab fa-safari"></a></li> <li><a href="#" class="fab fa-instagram"></a></li></ul></div></div>                   
                     
-                    <div v-for="centre in filteredCentres" class="col-md-3 col-sm-6" @click="toggleShowModal(centre)">
+                    <div v-for="centre in filteredCentres" class="col-md-3 col-sm-6 centre-card" @click="toggleShowModal(centre)">
                          <div class="team-thumb">
                               <div class="team-image">
-                                   <img v-bind:src="'images/' + centre.image" class="img-responsive" alt="">
+                                   <img v-bind:src="'images/' + centre.image" class="img-responsive img-rounded" alt="">
                               </div>
                               <div class="team-info">
                                    <h3>{{centre.name}}</h3>
