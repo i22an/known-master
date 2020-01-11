@@ -3,7 +3,7 @@
 
 <head>
 
-     <title>Known - Education HTML Template</title>
+     <title>Ilm-Connect</title>
      <!-- 
 
 Known Template 
@@ -84,7 +84,7 @@ http://www.templatemo.com/tm-516-known
                          </div>                         
                             <!-- Split button -->
                          <div class="btn-group">
-                              <button type="button" class="btn btn-success">Location Area</button>
+                              <button type="button" class="btn btn-success" style="text-transform: capitalize">Location Area: {{ areaFilter }}</button>
                               <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                               <span class="caret"></span>
                               <span class="sr-only">Toggle Dropdown</span>
@@ -101,7 +101,7 @@ http://www.templatemo.com/tm-516-known
                          </div>
 
                          <div class="btn-group">
-                                   <button type="button" class="btn btn-success">Subjects</button>
+                                   <button type="button" class="btn btn-success" style="text-transform: capitalize">Subjects: {{ subjectFilter }}</button>
                                    <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                    <span class="caret"></span>
                                    <span class="sr-only">Toggle Dropdown</span>
@@ -117,7 +117,6 @@ http://www.templatemo.com/tm-516-known
                               </div>
                     </div>
                    
-                    
                     <div v-for="centre in filteredCentres" class="col-md-3 col-sm-6 centre-card" @click="toggleShowModal(centre)">
                          <div class="team-thumb">
                               <div class="team-image">
@@ -133,6 +132,9 @@ http://www.templatemo.com/tm-516-known
                               </ul>
                          </div>
                     </div>
+
+                    
+                    <h3 v-if="filteredCentres.length === 0" class="text-center" >No Centres Available</h3>
 
                     <div id="centre-modal" class="modal" v-bind:class="{show: showModal}">
                          <!-- Modal content -->
