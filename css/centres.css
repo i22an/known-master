@@ -18,7 +18,7 @@
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 50%; /* Could be more or less, depending on screen size */
 }
 
 /* The Close Button */
@@ -43,8 +43,24 @@
 .centre-card {
     cursor: pointer;
     border-radius: 25px;
+    border: #CEFBEB solid 3px;
 }
 
 .centre-card:hover {
     box-shadow: 0 0 30px black;
+}
+
+.card-image {
+    border-radius: 10%;
+    height: 200px;
+    margin: 0 auto;
+}
+.safaribtn {
+    size: 110px;
+}
+#centre-modal {
+    text-align: center;
+}
+.centrewebbtn {
+    
 }

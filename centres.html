@@ -101,19 +101,15 @@ http://www.templatemo.com/tm-516-known
                     </div>
                    
                     
-                    <div v-for="centre in filteredCentres" class="col-md-3 col-sm-6 centre-card" @click="toggleShowModal(centre)">
-                         <div class="team-thumb">
+                    <div v-for="centre in filteredCentres" class="col-md-3 col-sm-6  container-fluid" @click="toggleShowModal(centre)">
+                         <div class="team-thumb centre-card">
                               <div class="team-image">
-                                   <img v-bind:src="'images/' + centre.image" class="img-responsive img-rounded" alt="">
+                                   <img v-bind:src="'images/' + centre.image" class="img-responsive card-image" alt="">
                               </div>
                               <div class="team-info">
                                    <h3>{{centre.name}}</h3>
                                    <span>{{centre.description}}</span>
                               </div>
-                              <ul class="social-icon">
-                                   <li><a v-bind:href="centre.website" class="fab fa-safari" target="_blank"></a></li>
-                                   <li><a href="#" class="fab fa-instagram"></a></li>
-                              </ul>
                          </div>
                     </div>
 
@@ -121,7 +117,14 @@ http://www.templatemo.com/tm-516-known
                          <!-- Modal content -->
                          <div class="modal-content">
                               <span class="close" @click="toggleShowModal()">&times;</span>
-                              <p>{{selectedCentre.name}}</p>
+                              <h3 modalname>{{selectedCentre.name}}</h3>
+                               <br>
+                              <img v-bind:src="'images/' + selectedCentre.image" class="img-responsive card-image" alt="">
+                              <br>
+                              <p class="lead modaldesc">{{selectedCentre.desc}}</p>
+                              <br>
+                              <p><a class="btn btn-info btn-lg centrewebbtn" v-bind:href="selectedCentre.website" target="_blank" style="background-color: #29ca8e"role="button">Learn more</a></p>
+
                          </div>
                     </div>
                </div>

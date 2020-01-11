@@ -467,6 +467,7 @@ http://www.templatemo.com/tm-516-known
 
   .team-info {
     padding: 20px 30px;
+    min-height: 150px;
   }
 
   .team-image img {
