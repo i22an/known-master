@@ -58,7 +58,7 @@ var app = new Vue({
                 {
                 name: "Darul Huffaz",
                 image: "darul-huffaz.jpg",
-                description: "123456",
+                description: "218 Changi Rd, PKMS Building, Singapore 419737 ",
                 desc: "We are a dedicated group of Quran teachers with the common objective of promoting Quranic reading and its proficiency and understanding among the local Muslims. We also offer courses that augment our core programmes and promote understanding and awareness of Islam.",
                 website: "http://darulhuffaz.sg/",
                 area:"East",
@@ -75,7 +75,7 @@ var app = new Vue({
             {
                 name: "Darul Quran",
                 image: "darul-quran.jpg",
-                description: "123456",
+                description: "451 Marine Parade Rd, Singapore 449283",
                 desc: "Menyediakan pendidikan Islam dengan kesungguhan, kesabaran dan keikhlasan dalam melahirkan Muslim yang berilmu dan bertaqwa berteraskan al-Quran dan al-Sunnah.",
                 website:"https://www.mks.org.sg/darul-quran/",
                 area:"East",
@@ -85,7 +85,7 @@ var app = new Vue({
             {
                 name: "Yameen",
                 image: "yameen.jpg",
-                description: "123456",
+                description: "52 Bussorah St Singapore 199468",
                 desc: "Using a systematic and structured approach, we aim to provide a safe learning environment for beginners or those who have lost touch in learning the Quran. ",
                 website:"http://www.yameen.sg/",
                 area:"Central",
@@ -102,7 +102,7 @@ var app = new Vue({
             {
                 name: "Muhd Zuhaili",
                 image: "muhd-zuhaili.jpg",
-                description: "123456",
+                description: "12 Joo Chiat Rd, Singapore 427353",
                 desc: "Welcome to MZ Services Singapore",
                 website:"https://mzuhailiservices.wordpress.com/about/",
                 area:"East",
@@ -120,7 +120,7 @@ var app = new Vue({
             {
                 name: "Al-Markaz",
                 image: "markaz.jpg",
-                description: "123456",
+                description: "58 Bussorah St, Singapore 199474",
                 desc: "The Arabic Language Centre",
                 website:"http://almarkaz.sg/",
                 area: {
